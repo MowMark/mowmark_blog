@@ -1,5 +1,5 @@
 # Change baseurl before deploy
-baseurl      = "https://mowmark2.github.io/"
+baseurl      = "https://mowmark.github.io/mowmark_blog/"
 languageCode = "zh-cn"
 title        = "MowMark的个人博客"
 
