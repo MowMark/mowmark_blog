@@ -1,5 +1,5 @@
 # 内容所在的子目录，将显示在首页和归档页
-mainSections = ["post"]
+mainSections = ["post", "os", "robot", "website"]
 # 在 RSS 中输出全文
 rssFullContent = true
 favicon        = "img/favicon.jpg"
@@ -8,7 +8,8 @@ favicon        = "img/favicon.jpg"
 SortBy              = "default"
 
 [footer]
-    customText = "这里可以自定义footer内容"
+    customText = ""
+    launchDate = "2026-05-13"
 
 [dateFormat]
     # 使用当地日期格式
@@ -16,8 +17,8 @@ SortBy              = "default"
     lastUpdated = ":date_medium"
 
 [sidebar]
-    emoji    = "🚀"
-    subtitle = "这是一个基于 Hugo Theme Stack v4 的修改版本"
+    emoji    = "🍦"
+    subtitle = "做点有意义与有趣的事"
     avatar   = "img/avatar.jpg"
 
 [article]

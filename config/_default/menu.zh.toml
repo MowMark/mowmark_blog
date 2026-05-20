@@ -6,32 +6,74 @@
     [main.params]
         icon = "home"
 
-[[main]]
-    identifier = "archives"
-    name       = "归档"
-    url        = "/archives/"
-    weight     = 2
-    [main.params]
-        icon = "archives"
+# [[main]]
+#     identifier = "archives"
+#     name       = "归档"
+#     url        = "/archives/"
+#     weight     = 2
+#     [main.params]
+#         icon = "archives"
 
 [[main]]
-    identifier = "search"
-    name       = "搜索"
-    url        = "/search/"
-    weight     = 3
+    identifier = "os"
+    name       = "操作系统"
+    url        = "/os/"
+    weight     = 2
     [main.params]
-        icon = "search"
+        icon = "devices-pc"
+
+[[main]]
+    identifier = "robot"
+    name = "机器人"
+    url = "/robot/"
+    weight = 3
+    [main.params]
+      icon = "robot"
+
+[[main]]
+    identifier = "website"
+    name       = "网站"
+    url        = "/website/"
+    weight     = 4 
+    [main.params]
+        icon = "world-www"
+
+# [[main]]
+#     identifier = "search"
+#     name       = "搜索"
+#     url        = "/search/"
+#     weight     = 5
+#     [main.params]
+#         icon = "search"
+
+[[main]]
+    identifier = "about"
+    name = "关于"
+    url = "/about/"
+    weight = 6
+    [main.params]
+        icon = "user"
 
 [[social]]
     identifier = "github"
     name       = "GitHub"
-    url        = "https://github.com/liu-houliang/hugo-stack-starter"
+    url        = "https://github.com/MowMark"
+    weight = 1
     [social.params]
         icon = "brand-github"
+
+[[social]]
+    identifier = "bilibili"
+    name = "BiliBili"
+    url = "https://space.bilibili.com/35739912"
+    weight = 2
+    [social.params]
+        icon = "brand-bilibili"
 
 [[social]]
     identifier = "RSS"
     name       = "RSS"
     url        = "/index.xml"
+    weight = 10
     [social.params]
         icon = "rss"

@@ -4,6 +4,7 @@ description: "详细介绍本模板在 Hugo Theme Stack v4 基础上进行的美
 date: 2026-04-10
 lastmod: 2026-04-23
 weight: 2
+draft: true
 categories:
     - Tutorial
 tags:

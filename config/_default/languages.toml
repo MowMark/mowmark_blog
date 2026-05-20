@@ -2,12 +2,12 @@
     languageCode      = "zh-cn"
     languageName      = "中文"
     languagedirection = "ltr"
-    title             = "我的博客"
+    title             = "MowMark的个人博客"
     weight            = 1
 
-[en]
-    languageCode      = "en-us"
-    languageName      = "English"
-    languagedirection = "ltr"
-    title             = "My Blog"
-    weight            = 2
+# [en]
+#     languageCode      = "en-us"
+#     languageName      = "English"
+#     languagedirection = "ltr"
+#     title             = "MowMark's Blog"
+#     weight            = 2

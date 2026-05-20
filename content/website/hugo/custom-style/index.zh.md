@@ -3,6 +3,7 @@ title: "样式自定义指南"
 description: "如何修改本模板的颜色、字体和各组件样式，使博客具有你的个人风格。"
 date: 2026-04-13
 lastmod: 2026-04-23
+draft: true
 categories:
     - Tutorial
 tags:

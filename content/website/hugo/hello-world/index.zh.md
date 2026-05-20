@@ -1,16 +1,18 @@
 ---
-title: "快速开始：使用 Template 一键部署博客"
+title: "[转载]快速开始：使用 Template 一键部署博客"
 description: "使用本 GitHub Template 模板，无需本地安装，直接通过 GitHub Actions 快速部署你的 Hugo 博客。"
 date: 2026-04-09
 lastmod: 2026-04-23
 weight: 1
-categories:
-    - Tutorial
+draft: true
+# categories:
+#     - Tutorial
 tags:
     - Hugo
     - 入门
     - 部署
     - GitHub Pages
+    - 转载
 ---
 
 ## 欢迎使用 Hugo Theme Stack Starter
@@ -103,12 +105,14 @@ hugo server
 ### 必须修改的配置
 
 **1. 站点标题和域名** (`config.toml`)：
+
 ```toml
 baseurl = "https://你的域名/"
 title   = "我的博客"
 ```
 
 **2. 你的头像和介绍** (`params.zh.toml`)：
+
 ```toml
 [sidebar]
     subtitle = "你的个性签名"
@@ -116,6 +120,7 @@ title   = "我的博客"
 ```
 
 **3. 运行时间** (`params.toml`)：
+
 ```toml
 [footer]
     launchDate = "2024-01-01"  # 博客建站日期
