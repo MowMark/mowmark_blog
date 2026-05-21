@@ -36,11 +36,11 @@ build:
 
 ## 环境准备与依赖安装
 
-Hugo依赖于Go语言, 但从`v0.121.0`起, Hugo已内置了Go工具链, 且包管理器能够自动处理依赖, 所以不管是手动安装二进制包还是使用包管理器安装的用户, 都可以跳过Go语言的安装部分(除非需要安装其他依赖 Go 语言的软件)
+Hugo依赖于Go语言, 但从`v0.121.0`起, Hugo已内置了Go工具链, 且包管理器能够自动处理依赖, 所以**不管是手动安装二进制包还是使用包管理器安装的用户, 都可以跳过 Go 语言的安装部分** (除非需要安装其他依赖 Go 语言的软件)
 
-但是后续的代码托管与发布一定离不开Git, 所以在安装Hugo之前, 我们必须先准备好Git, 已经安装好了的读者则可以跳过这个部分.
+但是后续的代码托管与发布一定离不开Git, 因此, **在安装 Hugo 之前, 我们必须先准备好Git**, 已经安装好了的读者则可以跳过这个部分.
 
-> **提示**: 以下部分网站可能需要科学上网环境, 请提前准备.
+> **提示**: 以下部分网站可能需要科学上网环境, 请自行准备所需工具.
 
 ### 安装Go语言
 
@@ -143,9 +143,9 @@ git submodule add https://github.com/panr/hugo-theme-terminal.git themes/termina
 接着, 打开根目录下的`hugo.toml`配置文件, 指定我们刚刚安装的主题, 并顺便修改一下基础配置:
 
 ```toml
-baseURL = "https://你的域名或GitHub.io" # 正式发布时的公网地址
+baseURL = "http://localhost:1313" # 沿用默认的本地调试地址
 defaultContentLanguage = "zh-cn" # 博客语言
-title = "MowMark 的技术小站" # 你的博客名称
+title = "MowMark 的技术博客" # 你的博客名称
 theme = "terminal" # 必须与 themes 目录下的文件夹名称一致
 ```
 
@@ -159,12 +159,13 @@ theme = "terminal" # 必须与 themes 目录下的文件夹名称一致
 hugo server -D # -D 参数表示渲染草稿文章(draft: true)
 ```
 
-> -D 参数表示渲染草稿文章(draft: true)
+> `-D` 参数表示渲染草稿文章(draft: true)
+
+> `hugo server` 对应的常用参数还有 `--port 端口号`, `--baseURL 域名`等, 具体参数可以查看[hugo server](https://hugo.opendocs.io/commands/hugo_server/)
 
 打开浏览器, 访问`http://localhost:1313`, 就能看到个人博客已经在本地成功运行了!
 
 当然, 在本地运行是不够的, **如何将它部署到公网上, 让所有人都能访问**?
 
-这就需要用到GitHub Pages 和自动化的构建工具了, 由于篇幅原因, 这部分内容我会在下一篇文章中讲解.
-
-<!-- 请看[托管到GitHubPages并使用GitHubActions自动化发布](../001_GitHubActions/index.md) -->
+这就需要用到GitHub Pages 和自动化的构建工具了.
+由于篇幅原因, 这部分内容我会在[使用GitHubPages部署博客](../001_GitHubPages)中讲解.

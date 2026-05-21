@@ -12,6 +12,18 @@
             </a>
         {{ end }}
     </header>
+    {{ else }}
+        {{ $currentSection := $Page.CurrentSection }}
+        {{ if and $currentSection (not $currentSection.IsHome) (ne $currentSection.Section "post") }}
+        <header class="article-category">
+            {{ $color := partial "helper/color-from-str" $currentSection.Title }}
+            {{ $BackgroundColor := default $color.BackgroundColor $currentSection.Params.style.background }}
+            {{ $TextColor := default $color.TextColor $currentSection.Params.style.color }}
+            <a href="{{ $currentSection.RelPermalink }}" style="background-color: {{ $BackgroundColor | safeCSS }}; color: {{ $TextColor | safeCSS }};">
+                {{ $currentSection.Title }}
+            </a>
+        </header>
+        {{ end }}
     {{ end }}
 
     <div class="article-title-wrapper">
@@ -45,6 +57,15 @@
                             {{- $Page.Date | time.Format $Page.Site.Params.dateFormat.published -}}
                         </time>
                     </span>
+
+                    {{ if and (ne $Page.Lastmod $Page.Date) (not $Page.Lastmod.IsZero) }}
+                    <span class="article-meta-group" style="display: inline-flex; align-items: center; gap: var(--spacing-md);" title="最后更新于 {{ $Page.Lastmod | time.Format $Page.Site.Params.dateFormat.lastUpdated }}">
+                        {{ partial "helper/icon" "clock" }}
+                        <time class="article-time--updated" datetime='{{ $Page.Lastmod.Format "2006-01-02T15:04:05Z07:00" }}'>
+                            更新于 {{- $Page.Lastmod | time.Format $Page.Site.Params.dateFormat.lastUpdated -}}
+                        </time>
+                    </span>
+                    {{ end }}
                 {{ end }}
 
                 {{ if $showReadingTime }}
