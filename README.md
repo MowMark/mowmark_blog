@@ -1,183 +1,94 @@
-# Hugo Theme Stack Starter
+# MowMark 的个人博客
 
-**中文** | [English](README.en.md)
+这是一个基于 [Hugo](https://gohugo.io/) 和 [Hugo Theme Stack](https://github.com/CaiJimmy/hugo-theme-stack) 构建的个人博客系统。
 
-一个基于 [Hugo Theme Stack v4](https://github.com/CaiJimmy/hugo-theme-stack) 的**开箱即用博客模板**，在原主题基础上做了一系列美化和功能增强。
+## 🌟 核心特性与架构
 
-> 📢 本项目已设置为 **GitHub Template**，点击右上角 **"Use this template"** 即可一键创建你自己的博客仓库，无需 Fork。
-> 
-> 🌐 **在线预览 (Live Demo)**: [https://liu-houliang.github.io/hugo-stack-starter/](https://liu-houliang.github.io/hugo-stack-starter/)
+本博客在原生 Stack 主题的基础上进行了一系列深度定制，主要特点包括：
 
----
+- **自动化侧边栏路由**：支持无限扩展的顶级侧边栏导航，自动识别目录下子文件夹生成“分类卡片”。
+- **全自动更新日期 (Lastmod)**：打通 Git 提交记录，自动根据文件的最后一次 `git commit` 生成并展示“更新于”标签。
+- **智能标签提取**：无需手动在 Markdown 中写入 `categories`，系统自动根据文章所在的物理文件夹名称生成分类标签。
+- **紧凑型归档列表**：重写了二级分类目录的展示逻辑，完美复刻年度归档页的 UI 设计。
 
-## ✨ 特性
+## 📁 核心目录结构
 
-| 功能 | 说明 |
-|------|------|
-| 🎨 **精致配色** | 深蓝 + 暖米白配色系统，亮色/暗色双模式 |
-| 💻 **Mac 风格代码块** | macOS 三色圆点顶栏，悬浮复制按钮，自动折叠长代码 |
-| 📐 **首页双栏网格** | PC 端两列卡片式文章列表，附封面图和 hover 动画 |
-| 📱 **移动端导航** | 全新顶部导航栏，含明暗切换、语言切换、汉堡菜单 |
-| 📊 **Stats 统计页** | GitHub 热力图 + 分类/标签分布 + 写作习惯分析 |
-| 🕐 **运行时长** | Footer 显示博客运行天数，点击跳转统计页 |
-| 🌐 **中英双语** | 内置中文/英文双语支持，一键切换 |
-| 💬 **Waline 评论** | 内置 Waline 评论集成，含阅读量统计 |
-| 🚀 **一键部署** | GitHub Actions 自动构建并部署到 GitHub Pages |
-| 🧩 **自定义 Shortcodes** | 时间线（Timeline）、标题分割线（Title） |
+本项目对内容（Content）进行了模块化切分，并非所有文章都挤在默认的 `post` 目录下。
 
----
-
-## 🚀 快速开始
-
-### 方式一：GitHub Template（推荐，5 分钟上线）
-
-1. 点击页面右上角 **"Use this template"** → **"Create a new repository"**
-2. 仓库设为 **Public**，填写名称后创建
-3. 进入新仓库 → **Settings** → **Pages** → **Source** 选择 **"GitHub Actions"**
-4. 编辑 `config/_default/config.toml`，修改 `baseurl` 和 `title`
-5. 提交代码，等待 1-2 分钟后访问你的 GitHub Pages 地址 🎉
-
-### 方式二：本地开发
-
-```bash
-# 安装 Hugo Extended 版本（>= 0.120.0）
-brew install hugo          # macOS
-scoop install hugo-extended  # Windows
-
-# 克隆仓库
-git clone https://github.com/你的用户名/my-blog.git
-cd my-blog
-
-# 启动本地服务
-hugo server
-```
-
-访问 `http://localhost:1313` 预览。
-
----
-
-## ⚙️ 基础配置
-
-所有配置文件在 `config/_default/` 目录：
-
-```
-config/_default/
-├── config.toml          # 站点标题、域名 ← 必须修改
-├── languages.toml       # 多语言设置
-├── params.toml          # 主题参数（评论、首页布局）
-├── params.zh.toml       # 中文专属参数（头像、副标题）← 建议修改
-├── params.en.toml       # 英文专属参数
-├── menu.zh.toml         # 中文导航菜单
-└── menu.en.toml         # 英文导航菜单
-```
-
-**最小修改清单：**
-
-```toml
-# config.toml
-baseurl = "https://你的用户名.github.io/仓库名/"
-title   = "我的博客"
-
-# params.zh.toml
-[sidebar]
-    subtitle = "你的个性签名"
-
-# params.toml
-[footer]
-    launchDate = "2024-01-01"   # 博客建站日期
-
-[comments.waline]
-    serverURL = "https://你的waline地址/"
-```
-
-> ⚠️ **重要提示**：模板默认配置了作者的 Waline 演示地址（仅供体验）。在正式使用时，请务必将其替换为你自己的 Waline 地址，否则你的评论数据将存放在他人的服务器中！详细部署教程请参考博客内置的《配置 Waline 评论区》文章。
-
----
-
-## 📝 写第一篇文章
-
-```bash
-hugo new content post/my-first-post/index.zh.md
-```
-
-文章 Front Matter 示例：
-
-```yaml
----
-title: "文章标题"
-description: "文章摘要"
-date: 2026-01-01
-categories:
-    - Technology
-tags:
-    - Hugo
-image: cover.jpg
----
-```
-
----
-
-## 📂 目录结构
-
-```
-hugo-stack-starter/
-├── .github/workflows/deploy.yml   # GitHub Actions 自动部署
-├── assets/
-│   └── scss/
-│       ├── custom.scss            # 颜色变量、全局样式
-│       └── partials/custom-components/
-│           ├── _code.scss         # 代码块样式
-│           ├── _footer.scss       # Footer 运行时长
-│           ├── _homepage-grid.scss # 首页网格布局
-│           ├── _mobile-menu.scss  # 移动端导航
-│           ├── _timeline.scss     # 时间线 Shortcode
-│           └── _title.scss        # 标题分割线 Shortcode
-├── config/_default/               # 所有配置文件
+```text
+.
+├── config/_default/       # Hugo 多文件配置目录 (config.toml, params.zh.toml, menu.zh.toml 等)
 ├── content/
-│   ├── post/                      # 博客文章
-│   ├── archives/                  # 归档页
-│   ├── search/                    # 搜索页
-│   └── stats/                     # 统计页
-├── layouts/
-│   ├── _default/stats.html        # Stats 统计页布局
-│   ├── _partials/
-│   │   ├── footer/footer.html     # 运行时长 Footer
-│   │   └── sidebar/left.html      # 侧边栏（含移动端导航）
-│   └── shortcodes/                # 自定义 Shortcodes
-└── i18n/                          # 中英文翻译
+│   ├── post/              # 默认文章目录
+│   ├── os/                # 自定义顶级板块：操作系统
+│   ├── robot/             # 自定义顶级板块：机器人
+│   └── website/           # 自定义顶级板块：网站
+├── layouts/               # 本地主题覆写目录 (Theme Overrides)
+│   ├── os/list.html       # 定制的二级归档列表模板
+│   ├── _partials/         # 覆写的原生组件 (例如修改标签颜色、添加更新时间的 details.html)
+│   └── ...
+└── public/                # 编译后自动生成的静态文件 (无需手动修改)
 ```
 
+## 🛠️ 新增顶级侧边栏板块 (SOP)
+
+如果你想要在左侧导航栏新增一个板块（例如：人工智能 `AI`），请严格遵循以下 4 步标准操作流程：
+
+### 1. 创建目录与索引文件
+在 `content/` 目录下创建 `ai/` 文件夹，并在其中新建一个极其简单的 `_index.md`：
+```markdown
 ---
-
-## 🗑️ 如果只需要中文
-
-1. 删除 `config/_default/languages.toml` 中的 `[en]` 块
-2. 删除所有 `.en.toml` 和 `.en.md` 文件
-3. 重启 `hugo server`
-
+title: "人工智能"
 ---
+```
+> ⚠️ **注意：** 绝对不要写 `layout: archives`，我们会用本地覆写的模板来渲染它。
 
-## 📖 文章导读
+### 2. 复制归档列表模板
+在根目录下的 `layouts/` 文件夹中新建对应目录并复制模板：
+```bash
+mkdir -p layouts/ai
+cp layouts/os/list.html layouts/ai/list.html
+```
+这一步利用了 Hugo 的路由机制，使得该顶级板块完美继承定制的“紧凑型分类卡片 + 年份归档”样式。
 
-博客内置了以下教程文章（按重要性排序）：
+### 3. 在配置文件中注册该板块
+为了让该板块下的最新文章能够正常在“首页信息流”和“全站归档”中显示，必须修改参数配置。
+编辑 `config/_default/params.zh.toml`（如有英文版也需同步修改）：
+```toml
+# 找到 mainSections 数组，加入你的新目录名称 (小写)
+mainSections = ["post", "os", "robot", "website", "ai"]
+```
 
-1. **快速开始** — Template 部署 + 基础配置
-2. **主题美化介绍** — 详解所有改动
-3. **配置 Waline 评论** — 评论系统接入
-4. **开始写博客** — Markdown 语法 + 多语言写作
-5. **样式自定义指南** — 颜色、字体、布局定制
-6. **Shortcodes 使用指南** — 时间线、标题分割线实战
+### 4. 添加入口到侧边栏菜单
+编辑 `config/_default/menu.zh.toml`，在文件末尾新增该导航项：
+```toml
+[[main]]
+    identifier = "ai"
+    name = "人工智能"
+    url = "/ai/"
+    weight = 5       # 决定它在菜单里的上下顺序
+    [main.params]
+      icon = "brain" # 图标名称 (需提前将 SVG 放入 assets/icons/ 目录下)
+```
 
----
+完成这四步后，新的侧边栏板块就搭建完毕了。你可以直接在 `content/ai/` 目录下建立子文件夹（例如 `content/ai/deep-learning/`），文章放在里面即可自动被系统识别出标签和分类。
 
-## 🙏 致谢
+## 📝 写作与部署指南
 
-- 主题基于 [Hugo Theme Stack](https://github.com/CaiJimmy/hugo-theme-stack) by [@CaiJimmy](https://github.com/CaiJimmy)
-- 评论系统 [Waline](https://waline.js.org/)
-- 静态站点生成器 [Hugo](https://gohugo.io/)
+### 本地开发命令
+```bash
+# 启动本地开发服务器，-D 参数确保能够预览草稿 (Draft)
+hugo server -D -p 1313
+```
 
----
+### 全自动 Lastmod (更新日期)
+你**不需要**在 Markdown 头部手动维护 `lastmod: yyyy-mm-dd`。
+系统已配置 `enableGitInfo = true` 以及前置 Git 解析优先级。你只需要正常修改文章并执行 `git commit`，列表页和文章标题下方就会自动渲染出最新的 `[更新于 YYYY年MM月DD日]` 标签。
 
-## 📄 许可证
+### 部署方式
+博客已配置 GitHub Actions (`.github/workflows/deploy.yml`)。
+你只需要将 Markdown 源码 `git push` 到 `main` 分支，系统将自动使用 Hugo 进行云端构建，并将其发布至 GitHub Pages。
 
-本项目采用 [GPL-3.0](LICENSE) 许可证。
+## 🙏 特别致谢
+
+在搭建和调整本博客复杂的路由结构与主题重写逻辑时，特别感谢 **GitHub Copilot (OpenCode)** 以及其背后强大的 **Gemini 3.1 Pro** 模型的协作。它协助我厘清了 Hugo 的模块化缓存机制，完美复刻了 Stack 主题的归档组件，并实现了纯自动化的标签与更新日期系统。

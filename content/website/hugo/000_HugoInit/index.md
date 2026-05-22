@@ -2,6 +2,7 @@
 title: "使用 Hugo 搭建个人博客"
 description: "零前端基础也能上手：用 Hugo 搭建属于自己的免费独立博客"
 date: 2026-05-13T20:53:02+08:00
+# lastmod: 2026-05-20T10:00:00+08:00
 # comments: true
 draft: false
 tags: ["Hugo"]
@@ -52,7 +53,7 @@ scoop install go
 choco install golang
 ```
 
-1. **Linux系统**: 官方推荐使用`snap`安装, 会自动处理依赖, 该步骤可跳过.
+2. **Linux系统**: 官方推荐使用`snap`安装, 会自动处理依赖, 该步骤可跳过.
 
 ### 安装Git
 
@@ -67,7 +68,7 @@ choco install git
 
 ```
 
-1. **Linux系统**: 根据你的发行版执行对应命令:
+2. **Linux系统**: 根据你的发行版执行对应命令:
 
 ```bash
 # 基于Debian
@@ -94,7 +95,7 @@ scoop install hugo-extended
 choco install hugo-extended
 ```
 
-1. **Linux环境**: 使用snap安装<!--, 如果没有安装snap, 则请查看[这一篇文章]() -->
+2. **Linux环境**: 使用snap安装<!--, 如果没有安装snap, 则请查看[这一篇文章]() -->
 
 ```bash
 sudo snap install hugo --channel=extended

@@ -4,6 +4,8 @@ baseurl = "http://localhost:1313"
 languageCode = "zh-cn"
 title = "MowMark的个人博客"
 
+enableGitInfo = true
+
 # Set default language
 defaultContentLanguage = "zh"
 
@@ -12,4 +14,7 @@ hasCJKLanguage = true
 
 [pagination]
     pagerSize = 10
-enableGitInfo = true
+
+[frontmatter]
+  date = ["date", "publishDate", "lastmod"]
+  lastmod = [":git", "lastmod", "date", "publishDate"]

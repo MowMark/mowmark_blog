@@ -58,7 +58,7 @@
                         </time>
                     </span>
 
-                    {{ if and (ne $Page.Lastmod $Page.Date) (not $Page.Lastmod.IsZero) }}
+                    {{ if and (ne ($Page.Lastmod.Format "2006-01-02") ($Page.Date.Format "2006-01-02")) (not $Page.Lastmod.IsZero) }}
                     <span class="article-meta-group" style="display: inline-flex; align-items: center; gap: var(--spacing-md);" title="最后更新于 {{ $Page.Lastmod | time.Format $Page.Site.Params.dateFormat.lastUpdated }}">
                         {{ partial "helper/icon" "clock" }}
                         <time class="article-time--updated" datetime='{{ $Page.Lastmod.Format "2006-01-02T15:04:05Z07:00" }}'>

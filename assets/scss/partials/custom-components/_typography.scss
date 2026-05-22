@@ -1,1 +1,35 @@
-/* Article typography styles */
+/* Article Content Typography Optimizations */
+
+.article-content {
+    /* 1. Blockquote (注释部分) Optimization */
+    blockquote {
+        margin: 1.5em 0;
+        padding: 1em 1.2em;
+        border-left: 4px solid var(--accent-color);
+        background-color: var(--blockquote-bg-custom);
+        border-radius: 0 8px 8px 0;
+        color: var(--card-text-color-main);
+        
+        p {
+            margin: 0;
+            line-height: 1.7;
+        }
+    }
+
+    /* 2. Bold Text (加粗) Optimization */
+    strong, b {
+        font-weight: 800; /* 加粗显示 */
+        font-size: 1.05em; /* 稍微放大一点字号 */
+        color: inherit; /* 继承原本的文本颜色 */
+    }
+
+    /* 3. Link (超链接) Custom Colors */
+    a {
+        color: var(--link-color-custom);
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: var(--link-color-hover-custom);
+        }
+    }
+}

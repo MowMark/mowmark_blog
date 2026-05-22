@@ -8,12 +8,13 @@
 @import "partials/custom-components/code";
 @import "partials/custom-components/title";
 @import "partials/custom-components/timeline";
+@import "partials/custom-components/typography";
 
 :root {
     --body-background: #f8f7f2;
     --accent-color: #1B365D;
     --accent-color-rgb: 27, 54, 93;
-    --accent-color-darker: #202A44;
+    --accent-color-darker: #122540;
     --accent-color-text: #FFF;
     --body-text-color: #2D3748;
 
@@ -26,6 +27,11 @@
     --card-separator-color: rgba(0, 0, 0, 0.08);
 
     --blockquote-background-color: #f2f1eb;
+    --blockquote-bg-custom: rgba(27, 54, 93, 0.04);
+    
+    --link-color-custom: #358b9e; /* 加深后的水蓝色，提高对比度 */
+    --link-color-hover-custom: #226b7a;
+
     --code-background-color: #f2f1eb;
     --code-text-color: #24292f;
 
@@ -44,7 +50,12 @@
 
         --code-background-color: #2d333b;
         --code-text-color: #adbac7;
+        
         --blockquote-background-color: #22272e;
+        --blockquote-bg-custom: rgba(88, 166, 255, 0.1);
+        
+        --link-color-custom: #4c8dd9; /* OpenCode Build 模式的深蓝色 */
+        --link-color-hover-custom: #6daaf5;
 
         img, video, iframe {
             filter: brightness(.8) contrast(1.1);
