@@ -7,7 +7,7 @@ math:
 license: 
 # comments: true
 draft: false
-tags: ["Hugo"]
+tags: ["Hugo", "建站", "博客"]
 build:
     list: always    # Change to "never" to hide the page from the list
 ---
@@ -32,7 +32,7 @@ build:
 > 1. 如果你希望博客最终的访问域名是简单的`https://<Your-UserName>.github.io`, 那么仓库的名称**必须**命名为`<Your-UserName>.github.io`.
 > 2. 如果你随便起了个名字 (例如`my-blog`), 那后续的访问域名就会是`https://<Your-UserName>.github.io/my-blog`.
 
-![](GitHub_Domain_Name.png)
+![GitHub 域名配置](GitHub_Domain_Name.png)
 
 权限请务必选择 **Public(公开)**, 否则 GitHub Pages 无法免费提供服务. *更多信息可以查看 **[GitHub Pages 说明](https://githubdocs.cn/en/pages/getting-started-with-github-pages/what-is-github-pages)**.*
 
@@ -67,6 +67,8 @@ git push -u origin main
 > **提示**: 关于这个部分, 有非常多的教程会倾向于先在本地运行 `hugo` 命令生成静态网页 (放在 `public/` 目录下), 再把 `public` 文件夹 `push` 到 GitHub 仓库. 这种做法相当繁琐, 每次发布文章都需要本地编译.
 > 所以这篇文章我们采用了另外一种做法: **将包含 `.md` 原稿的整个项目源码推送上去, 让 GitHub Actions 帮我们在云端自动部署并发布**.
 
+---
+
 ## 部署博客网站
 
 ### 配置 GitHub Pages
@@ -77,7 +79,7 @@ git push -u origin main
 
 ![配置 GitHub Pages ](GitHub_Pages.png)
 
-### 创建自动化部署工作流 (Workflow)
+### 创建自动化部署工作流
 
 我们需要在项目根目录下创建一个特定的文件, 告诉 GitHub 每当有代码推送时该怎么做.
 
@@ -174,3 +176,9 @@ git push
 推送完成后, 点击 GitHub 仓库顶部的 **Actions** 标签, 会看到一个正在转圈的任务, 等状态变成绿色的勾✅, 你的网站就已经成功发布到公网上了!
 
 访问你的域名(`https://<Your-UserName>.github.io` 或者 `https://<Your-UserName>.github.io/<Your-Repository>`)看看吧!
+
+---
+
+到目前为止, Hugo 搭建并初始化个人博客的基本步骤就已经写完了, 如果读者对网站的样式没有特别要求, 其实现在已经完全可以开始写文章了. 
+
+如果对 Terminal 主题不是特别满意的, 欢迎移步我的下一篇文章: [使用 Terminal 主题美化博客](../002_HugoThemeTerminal); 如果想要使用 Stack 主题美化博客的, 欢迎等待[使用 Stack 主题美化博客](../003_HugoThemeStack).

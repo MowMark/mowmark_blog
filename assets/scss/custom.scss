@@ -31,6 +31,8 @@
     
     --link-color-custom: #358b9e; /* 加深后的水蓝色，提高对比度 */
     --link-color-hover-custom: #226b7a;
+    --link-underline-custom: rgba(53, 139, 158, 0.3);
+    --link-bg-hover: rgba(53, 139, 158, 0.08);
 
     --code-background-color: #f2f1eb;
     --code-text-color: #24292f;
@@ -56,6 +58,8 @@
         
         --link-color-custom: #4c8dd9; /* OpenCode Build 模式的深蓝色 */
         --link-color-hover-custom: #6daaf5;
+        --link-underline-custom: rgba(76, 141, 217, 0.4);
+        --link-bg-hover: rgba(76, 141, 217, 0.12);
 
         img, video, iframe {
             filter: brightness(.8) contrast(1.1);
