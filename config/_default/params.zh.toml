@@ -1,5 +1,5 @@
 # 内容所在的子目录，将显示在首页和归档页
-mainSections = ["post", "os", "robot", "website"]
+mainSections = ["post", "computer", "robot", "website"]
 # 在 RSS 中输出全文
 rssFullContent = true
 favicon        = "img/favicon.jpg"
