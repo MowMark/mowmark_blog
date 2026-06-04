@@ -5,7 +5,7 @@ date: 2026-05-13T20:53:02+08:00
 # lastmod: 2026-05-20T10:00:00+08:00
 # comments: true
 draft: false
-tags: ["Hugo"]
+tags: ["Hugo", "建站", "博客"]
 build:
     list: always    # Change to "never" to hide the page from the list
 ---
@@ -169,4 +169,4 @@ hugo server -D # -D 参数表示渲染草稿文章(draft: true)
 当然, 在本地运行是不够的, **如何将它部署到公网上, 让所有人都能访问**?
 
 这就需要用到GitHub Pages 和自动化的构建工具了.
-由于篇幅原因, 这部分内容我会在[使用GitHubPages部署博客](../001_GitHubPages)中讲解.
+由于篇幅原因, 这部分内容我会在[使用GitHubPages部署博客]({{< ref "001_GitHubPages" >}})中讲解.

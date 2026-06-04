@@ -12,7 +12,7 @@ build:
     list: always    # Change to "never" to hide the page from the list
 ---
 
-承接上一篇文章: **[使用Hugo创建个人博客](../000_HugoInit)**, 在本地搭建好环境后, 本文将告诉你如何将博客手动以及自动化发布到公网.
+承接上一篇文章: **[使用Hugo创建个人博客]({{< ref "000_HugoInit" >}})**, 在本地搭建好环境后, 本文将告诉你如何将博客手动以及自动化发布到公网.
 
 ## 网络发布基础配置
 
@@ -181,4 +181,6 @@ git push
 
 到目前为止, Hugo 搭建并初始化个人博客的基本步骤就已经写完了, 如果读者对网站的样式没有特别要求, 其实现在已经完全可以开始写文章了. 
 
-如果对 Terminal 主题不是特别满意的, 欢迎移步我的下一篇文章: [使用 Terminal 主题美化博客](../002_HugoThemeTerminal); 如果想要使用 Stack 主题美化博客的, 欢迎等待[使用 Stack 主题美化博客](../003_HugoThemeStack).
+如果对 Terminal 主题不是特别满意的, 欢迎移步我的下一篇文章: [使用 Terminal 主题美化博客]({{< ref "002_HugoThemeTerminal" >}}). 
+
+如果想要使用 Stack 主题美化博客的, 我后续会更新相关文章, 敬请关注! 

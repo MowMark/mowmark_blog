@@ -1,7 +1,7 @@
 ---
-title: "000_UbuntuInstallation"
+title: "002_DisplayInputChange"
 description: 
-date: 2026-05-27T13:30:11+08:00
+date: 2026-06-02T15:30:32+08:00
 image: 
 math: 
 license: 

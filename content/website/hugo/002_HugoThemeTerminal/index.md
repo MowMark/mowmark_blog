@@ -5,13 +5,14 @@ date: 2026-05-22T09:12:24+08:00
 image: 
 math: 
 license: 
+tags: ["Hugo", "建站", "博客"]
 comments: true
 draft: false
 build:
     list: always    # Change to "never" to hide the page from the list
 ---
 
-承接上一篇文章: [使用 GitHub Pages 部署博客](../001_GitHubPages), 这篇文章我将分享使用 `Terminal` 主题美化博客的个人经验. 由于个人精力有限, 可能有一些地方并没有涉及到, 欢迎讨论交流.
+承接上一篇文章: [使用 GitHub Pages 部署博客]({{< ref "001_GitHubPages" >}}), 这篇文章我将分享使用 `Terminal` 主题美化博客的个人经验. 由于个人精力有限, 可能有一些地方并没有涉及到, 欢迎讨论交流.
 
 ## Hugo 配置文件的基本要求
 
@@ -85,4 +86,4 @@ Hugo 在构建时会优先读取根目录下的 `layouts/` 目录, 主题里的�
 
 这篇文章到这里基本就结束了. Terminal 主题本身并不复杂, 配置文件改几个参数就能跑起来, 真正需要花时间理解的反而是 Hugo 本身的复写机制, 这个搞清楚了, 后续不管换什么主题, 修改起来都会顺手很多.
 
-如果读者想要使用 Stack 主题, 欢迎移步我的下一篇文章: [使用 Stack 主题美化博客](../003_HugoThemeStack), 那个主题的结构比 Terminal 复杂不少, 需要花费比较多的时间进行调试.
+如果读者想要使用 Stack 主题, 后面我会更新相关文章, Stack 主题的结构比 Terminal 复杂不少, 需要花费比较多的时间进行调试.
