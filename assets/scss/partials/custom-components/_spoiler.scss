@@ -1,0 +1,14 @@
+.spoiler {
+    background-color: var(--card-text-color-main);
+    color: transparent;
+    border-radius: 3px;
+    padding: 0 2px;
+    cursor: help;
+    transition: color 0.25s ease, background-color 0.25s ease;
+
+    &:hover,
+    &:focus {
+        background-color: var(--blockquote-background-color);
+        color: var(--card-text-color-main);
+    }
+}
