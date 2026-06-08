@@ -15,6 +15,24 @@ build:
 
 这里是**MowMark**, 一名在读研究生, 喜欢折腾, 学习机器人算法中, 可能扩大折腾范围.
 
+## 更新计划
+
+- [ ] IBus Fcitx5 输入法及 Rime 的使用方法
+- [ ] Ventoy 的使用方法
+- [ ] Bash, Csh, Zsh
+- [ ] Vim, Neovim
+- [ ] v2ray, v2rayA 及 v2rayN
+- [ ] Clash, Clash For Windows, Clash Verge Rev
+- [ ] CherryStudio
+- [ ] OpenCode
+
+## 更新中内容
+
+- [x] [Hugo 个人博客搭建指南]({{< ref "/website/hugo" >}})
+- [x] [双系统安装指南]({{< ref "/computer/linux" >}})
+- [x] [多机协同工作方案]({{< ref "/computer/hardware/000_MultipleComputer" >}})
+<!-- README.md>
+
 # MowMark 的个人博客
 
 ## 博客介绍

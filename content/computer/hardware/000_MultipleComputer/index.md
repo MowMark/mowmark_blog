@@ -5,6 +5,7 @@ date: 2026-06-06T00:00:00+08:00
 image: 
 math: 
 license: 
+tags: ["键鼠共享", "显示器切换", "文件共享"]
 comments: true
 draft: false
 build:
